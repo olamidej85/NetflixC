@@ -1,0 +1,107 @@
+.movie-section {
+    padding: 20px;
+    background-color: #111111;
+    color: white;
+  }
+  
+  .movie-section h2 {
+    margin-top: 70px;
+    margin-left: 110px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+  
+  }
+  
+  .movie-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    overflow-x: auto;
+  }
+  
+  .movie-row img {
+    width: 180px;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .movie-row img:hover {
+    transform: scale(1.1);
+  }
+  .all-about{
+    align-items: center;   
+    display: flex;
+    justify-content: center;
+    padding-left: 40px;
+    
+  }
+  .all-about .about{
+    background-color: rgb(28,27,55);
+    min-height: 300px;
+    width: 20%;
+    border:none;
+    border-radius: 10px;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .about h3{
+    font-size: 25px;
+  }
+  .about p{
+    font-size: 16px;
+  }
+  
+  @media (max-width: 600px) {
+    .movie-section h2 {
+      margin-left: 30px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: 700;
+    
+    }
+    .movie-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      overflow-x: auto;
+    }
+    .movie-row img {
+      width: 150px;
+      height: 200px;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    
+    .movie-row img:hover {
+      transform: scale(1.1);
+    }
+    .about{
+      background-color: rgb(28,27,55);
+      min-height: 150px;
+      border:none;
+      border-radius: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+      
+    }
+    .all-about .about{
+      background-color: rgb(28,27,55);
+      min-height: 150px;
+      width: 80%;
+      border:none;
+      border-radius: 10px;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+  }
+  

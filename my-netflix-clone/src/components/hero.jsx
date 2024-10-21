@@ -1,7 +1,24 @@
-import React from 'react';
+import {useState} from 'react';
 import './Hero.css';
 
 const Hero = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validateEmail(email)) {
+      setError('Valid email required');
+    } else {
+      setError('');
+      console.log('Email submitted: ', email);
+    }
+  };
   return (
     <div className="hero">
       <div className="hero__overlay" />
@@ -17,10 +34,18 @@ const Hero = () => {
         <h1>Unlimited movies, TV shows, and more.</h1>
         <p>Starts at ₦2,200. Cancel anytime.</p>
         <p>Ready to watch? Enter your email to create or restart your membership.</p>
-        <div className="hero__input">
-          <input type="email" placeholder="Email address" />
-          <button>Get Started</button>
-        </div>
+        <form onSubmit={handleSubmit} className='hero__input'>
+            <div className={`form-group ${error ? '' : ''}`}>
+          <input type="email"
+           placeholder="Email Address"
+            className= {`email-input ${error ? 'is-invalid' : ''}`}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            />
+            <button className='btnn'>Get Started</button>
+            {error && <div className="invalid-feedback">{error}</div>}
+            </div>
+          </form>
       </div>
     </div>
   );

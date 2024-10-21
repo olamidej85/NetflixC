@@ -1,0 +1,13 @@
+.footer {
+    background-color: #111111;
+    color: gray;
+    padding-left: 150px;
+    
+  }
+  
+  .footer__links a {
+    
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
