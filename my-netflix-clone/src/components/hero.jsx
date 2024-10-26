@@ -1,9 +1,16 @@
 import {useState} from 'react';
 import './Hero.css';
+import { useNavigate } from 'react-router-dom';
+import Movies from './movies'
+import FAQ from './faq'
+import Footer from './footer'
+import Sign from './sign'
 
 const Hero = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
+  
   
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -12,15 +19,17 @@ const Hero = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!validateEmail(email)) {
-      setError('Valid email required');
-    } else {
+     
+    if (validateEmail(email)) {
       setError('');
-      console.log('Email submitted: ', email);
+      navigate('/registration'); 
+    } else {
+      setError('Please enter a valid email.');
     }
   };
   return (
-    <div className="hero">
+    <div>
+      <div className='hero'>
       <div className="hero__overlay" />
       <div className="hero__content">
       <div className="navbar">
@@ -47,8 +56,13 @@ const Hero = () => {
             </div>
           </form>
       </div>
+      </div>
+      <Movies/>
+    <FAQ/>
+    <Sign/>
+    <Footer /> 
     </div>
   );
 };
-
 export default Hero;
+ 

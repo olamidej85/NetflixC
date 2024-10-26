@@ -1,0 +1,70 @@
+ .input p{
+  font-weight: 600;
+  color: white;
+}
+.input {
+    text-align: center;
+    background-color: #111111;
+  }
+  
+  .input .email-input {
+    padding: 13px;
+    width: 40%;
+    max-width: 600px;
+    border-radius: 5px;
+    border: 1px solid green;
+    background-color: #1C2432;
+    color: white;
+  }
+  .input .invalid-feedback {
+    color:white;
+    font-size: 12px;
+    margin-top: 5px;
+    
+  }
+  
+  .input .btnn {
+    background-color: #e50914;
+    color: white;
+    padding: 8px 30px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .input .btnn:hover{
+    background-color: #c41019;
+  }
+
+  @media (max-width: 600px) {  
+  .input{
+    display: block;
+  }
+.input .email-input {
+    padding: 10px;
+    width: 70%;
+    max-width: 600px;
+    border-radius: 5px;
+    border: 2px solid red;
+    background-color: transparent;
+  }
+  
+  .input btnn {
+    background-color: #e50914;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .input p{
+    font-weight: 600;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  }
