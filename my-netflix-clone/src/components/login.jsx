@@ -1,8 +1,8 @@
 import { useState } from "react";
-import './sign.css'
+import './login.css'
 import { useNavigate } from 'react-router-dom';
 
-const Hero = () => {
+const login = () => {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
@@ -39,5 +39,5 @@ const Hero = () => {
         </div>
     );
   };
-  export default Hero;
+  export default login;
    

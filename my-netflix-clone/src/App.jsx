@@ -3,7 +3,7 @@ import Hero from './components/hero';
 import Movies from './components/movies';
 import FAQ from './components/faq';
 import Footer from './components/footer';
-import Sign from './components/sign';
+import SignIn from './components/signIn';
 import Registration from './components/registration';
 
 
@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path="/signIn" element={<SignIn />} /> 
         </Routes>
       </div>
     </Router>

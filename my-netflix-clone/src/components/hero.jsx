@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Movies from './movies'
 import FAQ from './faq'
 import Footer from './footer'
-import Sign from './sign'
+import Login from './login'
 
 const Hero = () => {
   const [email, setEmail] = useState('');
@@ -27,6 +27,9 @@ const Hero = () => {
       setError('Please enter a valid email.');
     }
   };
+  const handleSignInClick = () => {
+    navigate('/signIn'); 
+  };
   return (
     <div>
       <div className='hero'>
@@ -38,7 +41,7 @@ const Hero = () => {
         src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
         alt="Netflix Logo"
       />
-      <button className="navbar__signIn">Sign In</button>
+      <button className="navbar__signIn"  onClick={handleSignInClick}>Sign In</button>
     </div>
         <h1>Unlimited movies, TV shows, and more.</h1>
         <p>Starts at ₦2,200. Cancel anytime.</p>
@@ -59,7 +62,7 @@ const Hero = () => {
       </div>
       <Movies/>
     <FAQ/>
-    <Sign/>
+    <Login/>
     <Footer /> 
     </div>
   );
