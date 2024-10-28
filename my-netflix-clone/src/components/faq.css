@@ -2,14 +2,20 @@
     padding: 50px;
     background-color: #111111;
     color: white;
+    display: flex;
+   
+  align-items: center; 
+  flex-direction: column;
   }
   .faq h1{
     font-size: 20px;
-    padding-left: 100px;
+    text-align: left; 
+    width: 100%; 
+    padding-left: 150px;
   }
   
   .faq__container {
-    margin: 20px 0;
+    margin: 0 auto;
     width: 90%;
     padding-left: 100px;
   }
@@ -23,20 +29,7 @@
   .faq__question span {
     font-size: 20px;
   }
-  .faq {
-    padding: 50px;
-    background-color: #111;
-    color: white;
-  }
-  
-  .faq__container {
-    margin: 20px 0;
-  }
-  
-  .faq__item {
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
+ 
   
   .faq__question {
     display: flex;
@@ -64,15 +57,22 @@
   }  
 
   @media (max-width: 600px) {
+    .faq {
+      padding: 30px;
+    
+    }
     .faq h1{
       font-size: 20px;
-      padding-left: 30px;
+      padding-left: 0;
+    width: 100%; 
+    text-align: left;
     }
     
     .faq__container {
       margin: 20px 0;
       width: 110%;
-      padding-left: 25px;
+      padding-left: 0px;
+      
     }
      
   .faq__question h2 {
